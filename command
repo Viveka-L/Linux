@@ -119,7 +119,13 @@ chmood -R 777 logs----give all permission
 scheduling :
 Cron -it spport only in linux and mac
 Airflow 
-
+crontab -e
+*/2**** formula
+sudo apt install python3 python3-pip---for connect airflow
+sudo pip3 install virtualenv---creating virtual environment
+create directory and go to directory
+source airflow_venv/bin/activate---activate virtual environment
+ 
 
 
 
