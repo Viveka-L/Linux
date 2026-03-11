@@ -63,3 +63,69 @@ tar -zxvf sample.tar ---untar x-extract
 free -m ---- ram useage show in mp
 free -g ---ram usage show in gp
 sudo sh -c "sync; echo 3 > /proc/sys/vm/drop_caches---used for removing buff/cache
+wc--word count
+wc filename.txt---it shows the  how many word count, character, lines
+wc -w filename.txt---it shows the  how many word 
+wc -l filename.txt---it shows the  how many lines
+wc -c filename.txt---it shows the  how many character
+sort filename---sort the text in file
+sort -r filename---reverse sort
+sort -n filename---sort by numbers
+head filename.txt---it show first 10 lines
+head -n 5 filename.txt--show the first 5 lines
+grep --global regular expression
+grep ERROR filename.txt---it show the error acuquire in file
+grep -i error filename.txt---it show the error acuquire in file using case sensitive
+grep -v ERROR filename.txt---it ignore the errors and show the balance error free lines
+grep  WARNING *.txt---it show the error WARNING acuquire  LINES in file
+grep -r "Timeout" ~/logs ---it show the timeout acuquire lines  in file
+grep  "^\[ERROR\]" filename.txt---it show the error acuquire lines  in file
+SSH --secusion when it same network connect remotely with another device
+SCP--Secure copy connect server with another device
+ifconfig-- we have to take ip address from this to config with ssh
+sudo apt-get install openssh-server -- connect the server to ssh
+ssh ipaddress--for connect,password of another device
+hostname -- it show the hostname
+ssh  connecting device hostname---for connecting device
+download putty for connecting ssh on chrome and setup, run in cmd putty
+scp /source of your device  ip address to another device source
+find-find name,type,size
+find . -name filename.txt---it search the file on current directory 
+find . -name "*.txt"---it show the file end with *.txt
+find . -type f-size +10M---it show the file more than 10MP
+find . -mtime -1---it show the file modify by 1 today 
+touch--empty  dummy file
+find . -empty--it show the empty files
+find . -name "*.temp" -delete---delete the file *temp
+awk --command line tool 
+awk '{print}' data.txt---it show the file of content
+awk '{print $1}' data.txt---it show the file of first row content
+awk '{print $1 $3}' data.txt---it show the file of  first and 3rd rowscontent
+awk '{print $1 ,$3}' data.txt---it show the file of first and 3rd row content with word space
+awk '$2 > 27 {print $1, $3}' data.txt---it show the file of content age is greater then 27
+awk '{print}' data.txt---it show the file of content
+awk '{print "Name: %s | age: %s | role: %s\n", $1, $2,$3}' data.txt---it show the file of content with each of name,age, role
+change mode 
+d - directory
+r-read
+w-write
+x-execute
+terms:user(owner),group,others,root
+-   ---it's a file
+rw-read+write
+r--  --readonly
+chmood 777 dumy----give all permission
+chmood -R 777 logs----give all permission
+scheduling :
+Cron -it spport only in linux and mac
+Airflow 
+
+
+
+
+
+
+
+
+
+
