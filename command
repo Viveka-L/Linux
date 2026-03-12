@@ -117,7 +117,7 @@ r--  --readonly
 chmood 777 dumy----give all permission
 chmood -R 777 logs----give all permission
 scheduling :
-Cron -it spport only in linux and mac
+Cron -it spport only in linux and mac when i excute code.it will show the system time
 Airflow 
 crontab -e
 */2**** formula
@@ -125,12 +125,76 @@ sudo apt install python3 python3-pip---for connect airflow
 sudo pip3 install virtualenv---creating virtual environment
 create directory and go to directory
 source airflow_venv/bin/activate---activate virtual environment
- 
-
-
-
-
-
+#-command
+AIRFLOW_VERSION=2.6.2
+PYTHON_VERSION="$(python --version | cut -d " " -f 2| cut -d "." -f 1-2)"
+CONSTRAINT_URL="https://raw.githubsercontent.com/apache/airflow/constrains-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"-----install apache airflow with constraints, set airflow constraints
+pip install  "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}
+export AIRFLOW_HOME=~/airflow ---environmental path setting
+airflow webserver --port 8085------start web server
+airflow password creation
+  airflow users create \
+       --username admin \
+       --firstname gowtham
+       --lastname sb\
+       --role Admin\
+       --email test@admin.com
+ETL PYTHON(AIRFLOW) 
+  MYSQL----->PYTHON
+             ETL
+  AIRFLOW --->DAG
+ ps aux | grep airflow------already in use webserver while run
+ kill $(cat ~/airflow/airflow-scheduler.pid)------already in use airflow while run scheduling 
+shell script:
+vi test.sh---file created in shell
+#!/bin/bash---it execute with linux interperter
+echo"hello world"---print statement
+sh test.sh--run the shell file
+name="vive"
+echo "hello, $name!"----output hello, vive
+read---getting input from user
+echo "Enter ur name:"
+read username
+echo "welcome, $username!"
+if else:
+$num---using number
+-gt---greater than 
+fi---closing loop
+program if else:
+echo "Enter the number:"
+read num
+if [$num -gt 10]; then
+    echo "Number is greater than 10"
+else 
+    echo "Number is 10 or less"
+fi
+loops:
+for i in 1 2 3 4 5
+do 
+echo "Looping ... number $i"
+done----output 1 2 3 4 5
+find the file is there or not:
+filename="test.txt"
+if [ -f "$filename" ]; then
+    echo "$filename exists."
+else
+    echo "$filename does not exits."
+fi
+function:
+say_hello(){
+   echo "Hello from function!"
+}
+say_hello
+code with arguments:
+echo "Script Name: $0"
+echo "First Argument: $1"
+echo "Second Argument: $0"
+#combine arguments in a sentence
+echo "Hello, $1! ur role is $2."
+output--sh arg_ex.sh vive engineer
+file name-0
+vive -1 arg
+engineer-2 arg
 
 
 
